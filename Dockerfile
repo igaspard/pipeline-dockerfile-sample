@@ -5,7 +5,7 @@ RUN /bin/bash -c 'echo This woudl generally be apt-get or other system configrat
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    libopencv-dev \
+    libopencv-dev
 
 ENV myCustomerEnvVar="This is a sample." \
     otherEnvVar="This is also a sample."
