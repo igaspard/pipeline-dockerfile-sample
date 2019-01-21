@@ -9,5 +9,10 @@ pipeline {
         sh 'echo myCustomerEnvVar = $myCustomerEnvVar'
       }
     }
+    stage('Build') {
+      steps {
+        sh './build.sh' 
+      }
+    }
   }
 }
