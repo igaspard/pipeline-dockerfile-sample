@@ -12,7 +12,7 @@ RUN apt-get update \
     libopencv-dev
 
 WORKDIR /opt
-RUN wget http://www.cmake.org/files/v3.12/cmake-3.12.1.tar.gz && \
+RUN wget http://www.cmake.org/files/v3.12/cmake-3.12.1.tar.gz --no-check-certificate && \
         tar -xvzf cmake-3.12.1.tar.gz && \
         cd cmake-3.12.1/ && \
         ./configure  && \
