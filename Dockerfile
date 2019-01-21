@@ -8,5 +8,13 @@ RUN apt-get update \
     build-essential \
     libopencv-dev
 
+WORKDIR /opt
+RUN wget http://www.cmake.org/files/v3.12/cmake-3.12.1.tar.gz && \
+        tar -xvzf cmake-3.12.1.tar.gz && \
+        cd cmake-3.12.1/ && \
+        ./configure  && \
+        make -j8 && \
+        make install
+
 ENV myCustomerEnvVar="This is a sample." \
     otherEnvVar="This is also a sample."
