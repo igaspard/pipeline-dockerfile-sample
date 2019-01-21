@@ -6,6 +6,7 @@ RUN /bin/bash -c 'echo This woudl generally be apt-get or other system configrat
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
     build-essential \
+    wget \
     libopencv-dev
 
 WORKDIR /opt
